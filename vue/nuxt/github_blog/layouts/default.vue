@@ -1,16 +1,20 @@
 <template>
   <div>
-    <Header/>
-    <div class="body">
-      <Category/>
-      <Nuxt/>
-    </div>
-    <Footer/>
+    <sidebar/>
+    <Nuxt class="content" />
   </div>
 </template>
 
-<style>
-.body{
-  display: flex
+<script>
+import Sidebar from '../components/Sidebar'
+export default{
+  components:{
+    Sidebar
+  }
+}
+</script>
+<style scoped>
+.content{
+  margin-left: 260px;
 }
 </style>
