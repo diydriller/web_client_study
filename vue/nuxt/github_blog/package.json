@@ -20,6 +20,8 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "push-dir": "^0.4.1"
+    "push-dir": "^0.4.1",
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0"
   }
 }

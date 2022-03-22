@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@nuxt/typescript-build": "^2.1.0",
+    "nuxt-property-decorator": "^2.9.1"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.1.0"
+  }
+}
