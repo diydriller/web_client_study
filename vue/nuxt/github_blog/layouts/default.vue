@@ -1,23 +1,20 @@
 <template>
   <div>
 <!--    <sidebar/>-->
+    <test/>
     <Nuxt class="content" />
   </div>
 </template>
 
 <script lang="ts">
-import {Component,Vue} from "vue-property-decorator";
-// import Sidebar from '@/components/Sidebar'
-//
-// @Component({
-//   components:Sidebar
-// })
+import Vue from 'vue';
 
-export default class App extends Vue{
-  // components:{
-  //   Sidebar
-  // }
-}
+export default Vue.extend({
+  components:{
+  //   Sidebar:()=>import('~/components/Sidebar')
+    Test:()=>import('~/components/Test')
+  }
+})
 </script>
 <style scoped>
 .content{
