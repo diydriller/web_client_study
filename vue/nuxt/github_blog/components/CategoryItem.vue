@@ -7,7 +7,7 @@
         </span>
         <span class="category_name">{{title}}</span>
       </a>
-      <i class='bx bx-chevron-down'></i>
+      <i class='bx bx-chevron-down' @click="toggleMenu"></i>
     </div>
     <category-item-sub-menu
       :subCategories="subCategories"
@@ -15,16 +15,28 @@
   </div>
 </template>
 
-<script>
-import CategoryItemSubMenu from './CategoryItemSubMenu';
 
-export default{
+<script>
+import { defineComponent } from '@vue/composition-api';
+import CategoryItemSubMenu from '@/components/CategoryItemSubMenu';
+
+export default defineComponent({
   components:{
     CategoryItemSubMenu
   },
-  props:['title','icon','subCategories']
-}
+  props:['title','icon','subCategories'],
+  setup(){
+
+    const toggleMenu=function (e){
+      let parent=e.target.parentElement.parentElement;
+      parent.classList.toggle("showMenu");
+    }
+
+    return {toggleMenu};
+  }
+});
 </script>
+
 
 <style scoped>
 
@@ -68,7 +80,13 @@ export default{
   text-align: center;
   line-height: 50px;
   font-size: 20px;
+  transition: all 0.3s ease;
 }
+.item.showMenu i{
+  transform: rotate(-180deg);
+}
+
+
 .category_item .category_name{
   font-size: 18px;
   font-weight: 400;

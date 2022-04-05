@@ -21,24 +21,17 @@ export default {
 </script>
 
 <style scoped>
-.sub_menu{
+.item .sub_menu{
   padding: 6px 6px 14px 80px;
   background: #1d1b31;
-
+  display: none;
 }
 
-.sub_menu.close{
-  position: absolute;
-  left:100%;
-  top:-10px;
-  padding: 10px 20px;
-  border-radius: 0 6px 6px 0;
-  transition: all 0.4s ease;
+.item.showMenu .sub_menu{
+  display: block;
 }
 
-.sub_menu.close:hover{
-  top:0;
-}
+
 
 </style>
 

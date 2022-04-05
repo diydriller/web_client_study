@@ -1,23 +1,32 @@
 <template>
   <div>
-<!--    <sidebar/>-->
-    <test/>
-    <Nuxt class="content" />
+    <sidebar/>
+    <div class="content">
+      <Nuxt/>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
 
-export default Vue.extend({
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api';
+import Sidebar from "@/components/Sidebar.vue";
+
+export default defineComponent({
   components:{
-  //   Sidebar:()=>import('~/components/Sidebar')
-    Test:()=>import('~/components/Test')
+    Sidebar
+  },
+  setup(){
+    return {}
   }
-})
+});
 </script>
+
+
 <style scoped>
+
 .content{
+  background: #11101d;
   margin-left: 260px;
 }
 </style>
