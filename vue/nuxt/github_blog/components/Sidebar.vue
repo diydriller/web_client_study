@@ -3,7 +3,7 @@
     <title-item/>
     <div class="category">
       <category-item v-for="category in categories"
-                     :key="category"
+                     :key="category.title"
                      :title="category.title"
                      :icon="category.icon"
                      :subCategories="category.subCategories"
@@ -18,7 +18,7 @@ import {defineComponent,computed} from '@vue/composition-api';
 import CategoryItem from "@/components/CategoryItem.vue";
 import TitleItem from "@/components/TitleItem.vue";
 import ProfileItem from "@/components/ProfileItem.vue"
-import Category from "@/data/category";
+import Category from "~/data/category";
 
 export default defineComponent({
   components:{

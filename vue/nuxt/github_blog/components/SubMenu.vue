@@ -1,21 +1,23 @@
 <template>
   <div class="sub_menu">
-    <category-item-sub-menu-item v-for="subCategory in subCategories"
-                                 :key="subCategory"
-                                 :title="subCategory"
+    <sub-menu-item v-for="subCategory in subCategories"
+                   :key="subCategory.subTitle"
+                   :sub-title="subCategory.subTitle"
+                   :title="title"
     />
   </div>
 </template>
 
 <script>
-import CategoryItemSubMenuItem from './CategoryItemSubMenuItem.vue';
+import SubMenuItem from './SubMenuItem.vue';
 
 export default {
   components:{
-    CategoryItemSubMenuItem
+    SubMenuItem
   },
   props:[
-    'subCategories'
+    'subCategories',
+    'title'
   ]
 }
 </script>

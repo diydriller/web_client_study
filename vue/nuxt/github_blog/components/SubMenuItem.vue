@@ -1,12 +1,12 @@
 <template>
   <div class="sub_menu_item">
-    <a href="#">{{title}}</a>
+    <a :href="'/'+title+'/'+subTitle">{{subTitle}}</a>
   </div>
 </template>
 
 <script>
 export default {
-  props:['title']
+  props:['subTitle','title']
 }
 </script>
 

@@ -1,17 +1,26 @@
+import {Category} from "@/interfaces/Category";
+
 export default {
-  categories: [
+  categories: <Category[]> [
     {
       title: 'backend',
       icon: '~assets/icon/backend.png',
       subCategories: [
-        'spring', 'nodejs'
+        {
+          subTitle: 'spring'
+        },
+        {
+          subTitle: 'nodejs'
+        }
       ]
     },
     {
       title: 'frontend',
       icon: '~assets/icon/backend.png',
       subCategories: [
-        'html', 'css', 'vue'
+        {
+          subTitle: 'vue'
+        }
       ]
     }
   ]

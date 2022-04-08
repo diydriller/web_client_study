@@ -9,8 +9,9 @@
       </a>
       <i class='bx bx-chevron-down' @click="toggleMenu"></i>
     </div>
-    <category-item-sub-menu
+    <sub-menu
       :subCategories="subCategories"
+      :title="title"
     />
   </div>
 </template>
@@ -18,11 +19,11 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api';
-import CategoryItemSubMenu from '@/components/CategoryItemSubMenu';
+import SubMenu from '@/components/SubMenu';
 
 export default defineComponent({
   components:{
-    CategoryItemSubMenu
+    SubMenu
   },
   props:['title','icon','subCategories'],
   setup(){

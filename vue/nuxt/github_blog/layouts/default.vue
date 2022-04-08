@@ -26,7 +26,6 @@ export default defineComponent({
 <style scoped>
 
 .content{
-  background: #11101d;
   margin-left: 260px;
 }
 </style>
